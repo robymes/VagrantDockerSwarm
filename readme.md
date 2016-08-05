@@ -3,15 +3,18 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
 * 1 drained manager node (no container will run on this node)
 * 2 worker nodes
 * 1 Nginx load balancer on port 8080, configured to listen to workers on port 80
+
 ## Installation
 * install Virtualbox >= 5.1
 * install Git
 * install Vagrant >= 1.8.5
+
 ## Configuration
 * configure ssh client for Vagrant using ssh in Git
     setx PATH "%PATH%;C:\Users\<user_name>\AppData\Local\Programs\Git\usr\bin"
 * optional, modify vagrant global working dir
     setx VAGRANT_HOME "X:/your/path" /M
+
 ## Run
 1. clone this repository
 2. run Vagrant pointing the Vagrantfile folder
@@ -19,6 +22,7 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
 3. NOTE: in presence of a SSL error during initial box dowload phase, run first the following commands
     vagrant box add --insecure ubuntu/trusty64
     vagrant up
+
 ## Test Cluster Configuration
 1. ssh into manager01
     vagrant ssh manager01
@@ -29,6 +33,7 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
     * 2 workers: Ready, Active
 4. exit manager
     exit
+
 ## Test Cluster
 1. ssh into manager01
     vagrant ssh manager01
