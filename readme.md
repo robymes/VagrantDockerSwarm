@@ -25,7 +25,7 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
 ```
     vagrant up
 ```
-* NOTE: in presence of a SSL error during initial box dowload phase, run first the following commands
+* NOTE: in presence of a SSL error during initial box dowload phase, run the following commands
 ```
     vagrant box add --insecure ubuntu/trusty64
     vagrant up
@@ -60,7 +60,7 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
 ```
 * wait for service running
 ```
-    docker service ls #**REPLICAS** should be **5/5**
+    docker service ls #REPLICAS column should be 5/5
 ``` 
 * point your browser to **http://localhost:8080**, should receive a JSON ok response
 * point your browser to **http://localhost:8080/ping**, should receive a JSON response with container IP config details
