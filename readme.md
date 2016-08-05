@@ -20,48 +20,48 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
 ```
 
 ## Run
-1. clone this repository
-2. run Vagrant pointing the Vagrantfile folder (cmd prompt)
+* clone this repository
+* run Vagrant pointing the Vagrantfile folder (cmd prompt)
 ```
     vagrant up
 ```
-3. NOTE: in presence of a SSL error during initial box dowload phase, run first the following commands
+* NOTE: in presence of a SSL error during initial box dowload phase, run first the following commands
 ```
     vagrant box add --insecure ubuntu/trusty64
     vagrant up
 ```
 
 ## Test Cluster Configuration
-1. ssh into manager01
+* ssh into manager01
 ```
     vagrant ssh manager01
 ```
-2. at manager01 prompt [*vagrant@manager01:~$*]
+* at manager01 prompt [*vagrant@manager01:~$*]
 ```
     docker node ls
 ```
-3. should list 
+* should list 
     * 1 manager: Ready, Drain, Leader
     * 2 workers: Ready, Active
-4. exit manager
+* exit manager
 ```
     exit
 ```
 
 ## Test Cluster
-1. ssh into manager01
+* ssh into manager01
 ```
     vagrant ssh manager01
 ```
-2. at manager01 prompt [*vagrant@manager01:~$*]
+* at manager01 prompt [*vagrant@manager01:~$*]
 ```
     docker network create -d overlay nodeping
     docker service create --name nodeping --network nodeping --publish 80:8080 --replicas 5 robymes/dockerswarm
 ```
-3. wait for service running
+* wait for service running
 ```
     docker service ls #**REPLICAS** should be **5/5**
 ``` 
-4. point your browser to **http://localhost:8080**, should receive a JSON ok response
-5. point your browser to **http://localhost:8080/ping**, should receive a JSON response with container IP config details
-6. refresh several times, *instanceId* property should change in load balancing 
+* point your browser to **http://localhost:8080**, should receive a JSON ok response
+* point your browser to **http://localhost:8080/ping**, should receive a JSON response with container IP config details
+* refresh several times, *instanceId* property should change in load balancing 
