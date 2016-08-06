@@ -1,4 +1,4 @@
-# Docker "Swarm Mode" Cluster with Vagrant
+# Docker "Swarm Mode" cluster with Vagrant
 This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the following topology:
 * 1 drained manager node (no container will run on this node)
 * 2 worker nodes
@@ -38,7 +38,7 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
 ```
 * **Windows only**: if you still have problems downloading Vagrant box, try install [VC++ redist. package](https://www.microsoft.com/en-us/download/confirmation.aspx?id=8328)
 
-## Test Cluster Configuration
+## Verify cluster configuration
 * ssh into manager01
 ```
     vagrant ssh manager01
@@ -55,7 +55,7 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
     exit
 ```
 
-## Test Cluster
+## Test cluster
 * ssh into manager01
 ```
     vagrant ssh manager01
