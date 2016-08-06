@@ -70,4 +70,4 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
 ``` 
 * point your browser to **http://localhost:8080**, should receive a JSON ok response
 * point your browser to **http://localhost:8080/ping**, should receive a JSON response with container IP config details
-* refresh several times, *instanceId* property should change in load balancing 
+* refresh several times: *instanceId* property should change in load balancing 
