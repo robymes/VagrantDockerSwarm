@@ -1,15 +1,16 @@
-# Docker "Swarm Mode" Cluster with Vagrant on Windows
+# Docker "Swarm Mode" Cluster with Vagrant
 This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the following topology:
 * 1 drained manager node (no container will run on this node)
 * 2 worker nodes
 * 1 Nginx load balancer on port 8080, configured to listen to workers on port 80
 
-## Installation
+
+## System prerequisites
 * install Virtualbox >= 5.1
-* install Git
+* install Git >= 2.9
 * install Vagrant >= 1.8.5
 
-## Configuration
+## System configuration: Microsoft Windows
 * configure ssh client for Vagrant using ssh in Git (cmd prompt as Admin)
     
     depending on your Git installation path
@@ -35,7 +36,7 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
     vagrant box add --insecure ubuntu/trusty64
     vagrant up
 ```
-* if you still have problems downloading Vagrant box, try install [VC++ redist. package](https://www.microsoft.com/en-us/download/confirmation.aspx?id=8328)
+* **Windows only**: if you still have problems downloading Vagrant box, try install [VC++ redist. package](https://www.microsoft.com/en-us/download/confirmation.aspx?id=8328)
 
 ## Test Cluster Configuration
 * ssh into manager01
