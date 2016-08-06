@@ -11,13 +11,19 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
 
 ## Configuration
 * configure ssh client for Vagrant using ssh in Git (cmd prompt as Admin)
+    
+    depending your Git Installation path
 ```
-    setx PATH "%PATH%;C:\Users\<user_name>\AppData\Local\Programs\Git\usr\bin"
+    setx PATH "%PATH%;%UserProfile%\AppData\Local\Programs\Git\usr\bin"
 ```
-* optional, modify vagrant global working dir
 ```
-    setx VAGRANT_HOME "X:/your/path" /M
+    setx PATH "%PATH%;%ProgramFiles%\git\usr\bin"
 ```
+* optional, modify Vagrant global working dir (where Vagrant dowloads boxes) 
+```
+    setx VAGRANT_HOME "X:\your\path" /M
+```
+* if you still have problems downloading Vagrant box, try install [VC++ redist. package](https://www.microsoft.com/en-us/download/confirmation.aspx?id=8328)
 
 ## Run
 * clone this repository
