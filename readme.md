@@ -4,7 +4,7 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
 * 2 worker nodes
 * 1 Nginx load balancer on port 8080, configured to listen to workers on port 80
 
-All the Vagrant machines are based on Linux Ubuntu 14.04 (Trusty) 64bit
+All the Vagrant machines are based on Linux Ubuntu 14.04 (Trusty) 64bit: box [ubuntu/trusty64](https://atlas.hashicorp.com/ubuntu/boxes/trusty64)
 
 
 ## System prerequisites
