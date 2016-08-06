@@ -71,3 +71,10 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
 * point your browser to **http://localhost:8080**, should receive a JSON ok response
 * point your browser to **http://localhost:8080/ping**, should receive a JSON response with container IP config details
 * refresh several times: *instanceId* property should change in load balancing 
+
+## Modify cluster configuration
+* modify Vagrantfile to:
+    * add more managers and workers
+    * change port forwarding to Vagrant host
+* change Nginx load balancer configuration file (for example if you add more workers you have to add the new ones in the *upstream* section)
+* ...
