@@ -75,7 +75,7 @@ This is a Vagrant configuration for a Docker **Swarm Mode** Cluster with the fol
 
 ## Modify cluster configuration
 * modify Vagrantfile to:
-    * add more managers and workers
+    * add more managers and/or workers
     * change port forwarding to Vagrant host
 * change Nginx load balancer configuration file (for example if you add more workers you have to add the new ones in the *upstream* section)
 * ...
